@@ -69,7 +69,7 @@ class MyHomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(2.0),
                     child: IconButton(
                       color: Colors.white,
-                      icon: const Icon(Icons.settings),
+                      icon: const Icon(Icons.share_outlined),
                       onPressed: () {
                         // Action à exécuter lorsque l'icône "Paramètres" est cliquée
                       },
@@ -87,9 +87,9 @@ class MyHomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(2.0),
                     child: IconButton(
                       color: Colors.white,
-                      icon: const Icon(Icons.notifications),
+                      icon: const Icon(Icons.bookmark_border_outlined),
                       onPressed: () {
-                        // Action à éxécuter lorsque l'icône "Notifications" est cliquée
+                        // Action à exécuter lorsque l'icône "Notifications" est cliquée
                       },
                     ),
                   ),
@@ -123,7 +123,7 @@ class MyHomePage extends StatelessWidget {
                   "£3,800.00/month",
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 19.0,
+                    fontSize: 20.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -135,17 +135,18 @@ class MyHomePage extends StatelessWidget {
                         color: Colors.grey[200],
                         border: Border.all(
                           color: Colors.transparent,
-                          width: 1.0,
+                          width: 5.0,
                         ),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0)),
                       ),
                       child: const Row(
                         children: <Widget>[
-                          Icon(Icons.door_front_door, color: Colors.black),
+                          Icon(Icons.door_front_door_outlined,
+                              color: Colors.black),
                           SizedBox(width: 8.0),
                           Text(
-                            '2 Bedroom',
+                            '2 Bedrooms',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16.0,
@@ -160,17 +161,17 @@ class MyHomePage extends StatelessWidget {
                         color: Colors.grey[200],
                         border: Border.all(
                           color: Colors.transparent,
-                          width: 1.0,
+                          width: 5.0,
                         ),
                         borderRadius:
                             const BorderRadius.all(Radius.circular(8.0)),
                       ),
                       child: const Row(
                         children: <Widget>[
-                          Icon(Icons.bathtub, color: Colors.black),
+                          Icon(Icons.bathtub_outlined, color: Colors.black),
                           SizedBox(width: 8.0),
                           Text(
-                            '2 Bathroom',
+                            '2 Bathrooms',
                             style: TextStyle(
                               color: Colors.black,
                               fontSize: 16.0,
@@ -186,100 +187,114 @@ class MyHomePage extends StatelessWidget {
           ),
           Container(
             margin: const EdgeInsets.all(16.0),
-            child: const Column(
+            child: Column(
               children: <Widget>[
                 // Première paire de colonnes
                 Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceAround, // Utilisez MainAxisAlignment.spaceBetween
                   children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text(
-                          'Interior',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 18.0,
+                    Container(
+                      margin: const EdgeInsets.all(8.0),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment
+                            .start, // Alignez les éléments à gauche
+                        children: <Widget>[
+                          Text(
+                            'Interior',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '950 sqft',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
+                          Text(
+                            '950 sqft',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 16.0,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                    SizedBox(
-                      width: 16.0,
-                    ), // Espacement horizontal entre les titres
-                    Column(
-                      children: <Widget>[
-                        Text(
-                          'Type',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 16.0,
+                    Container(
+                      margin: const EdgeInsets.all(8.0),
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment
+                            .start, // Alignez les éléments à gauche
+                        children: <Widget>[
+                          Text(
+                            'Type',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 16.0,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Rental',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.0,
+                          Text(
+                            'Rental',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
-                ), // Espacement vertical entre les paires de colonnes
+                ),
                 // Deuxième paire de colonnes
                 Row(
+                  mainAxisAlignment: MainAxisAlignment
+                      .spaceAround, // Utilisez MainAxisAlignment.spaceBetween
                   children: <Widget>[
-                    Column(
-                      children: <Widget>[
-                        Text(
-                          'Year built',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 16.0,
+                    Container(
+                      margin: const EdgeInsets.all(8.0),
+                      child: const Column(
+                        children: <Widget>[
+                          Text(
+                            'Year built',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 16.0,
+                            ),
                           ),
-                        ),
-                        Text(
-                          '2014',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18.0,
+                          Text(
+                            '2014',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                    SizedBox(
-                      width: 16.0,
-                    ), // Espacement horizontal entre les titres
-                    Column(
-                      children: <Widget>[
-                        Text(
-                          'Other',
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 18.0,
+                    Container(
+                      margin: const EdgeInsets.all(8.0),
+                      child: const Column(
+                        children: <Widget>[
+                          Text(
+                            'Other',
+                            style: TextStyle(
+                              color: Colors.grey,
+                              fontSize: 18.0,
+                            ),
                           ),
-                        ),
-                        Text(
-                          'Air Conditioning',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 16.0,
+                          Text(
+                            'Air Conditioning',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.0,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ],
                 ),
@@ -302,9 +317,10 @@ class MyHomePage extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(100.0),
                       child: Image.asset(
-                        'assets/img2.jpg',
+                        'assets/img4.jpeg',
                         fit: BoxFit.cover,
-                        height: 100.0,
+                        height:
+                            100.0, // Vous pouvez ajuster cette valeur pour réduire la taille de l'image
                       ),
                     ),
                   ),
@@ -320,6 +336,8 @@ class MyHomePage extends StatelessWidget {
                             style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 18.0,
+                              fontFamily:
+                                  'YourProfessionalFont', // Ajoutez ici la police professionnelle
                             ),
                           ),
                           const SizedBox(height: 2.0),
@@ -327,6 +345,8 @@ class MyHomePage extends StatelessWidget {
                             'LatoyaMiller@gmail.com',
                             style: TextStyle(
                               fontSize: 16.0,
+                              fontFamily:
+                                  'YourProfessionalFont', // Ajoutez ici la police professionnelle
                             ),
                           ),
                           ElevatedButton(
@@ -365,6 +385,8 @@ class MyHomePage extends StatelessWidget {
                               'Book an appointment',
                               style: TextStyle(
                                 color: Colors.white,
+                                fontFamily:
+                                    'YourProfessionalFont', // Ajoutez ici la police professionnelle
                               ),
                             ),
                           ),
@@ -375,7 +397,7 @@ class MyHomePage extends StatelessWidget {
                 ],
               ),
             ),
-          )
+          ),
         ],
       ),
     );

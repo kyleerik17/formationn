@@ -339,12 +339,15 @@ class MyHomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Expanded(
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(100.0),
-                      child: Image.asset(
-                        'assets/img4.jpeg',
-                        fit: BoxFit.cover,
-                        height: 100.0,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(50.0),
+                        child: Image.asset(
+                          'assets/img4.jpeg',
+                          fit: BoxFit.cover,
+                          height: 90.0,
+                        ),
                       ),
                     ),
                   ),

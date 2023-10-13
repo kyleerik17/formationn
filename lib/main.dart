@@ -36,7 +36,7 @@ class MyHomePage extends StatelessWidget {
                         topRight: Radius.circular(65.9),
                       ),
                       child: Image.asset(
-                        'assets/img1.jpg',
+                        'assets/img2.jpg',
                         width: double.infinity,
                         height: double.infinity,
                         fit: BoxFit.cover,
@@ -338,15 +338,33 @@ class MyHomePage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Expanded(
+                  Container(
+                    width: 100.0,
+                    height: 100.0,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(50.0),
-                        child: Image.asset(
-                          'assets/img4.jpeg',
-                          fit: BoxFit.cover,
-                          height: 90.0,
+                      child: DecoratedBox(
+                        decoration: const BoxDecoration(
+                          shape: BoxShape
+                              .circle, // Assurez-vous que la forme est un cercle
+                          gradient: LinearGradient(
+                            begin: Alignment.topLeft, // Début du dégradé
+                            end: Alignment.bottomRight, // Fin du dégradé
+                            colors: [
+                              Color(0xFF00A3A3),
+                              Color(0xFFD9FF66)
+                            ], // Couleurs du dégradé
+                          ),
+                        ),
+                        child: Center(
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(50.0),
+                            child: Image.asset('assets/img8.png',
+                                fit: BoxFit
+                                    .cover, // Remplir l'espace en conservant l'aspect ratio
+                                height: 500 // Ajustez la hauteur au maximum
+                                ),
+                          ),
                         ),
                       ),
                     ),
@@ -370,55 +388,68 @@ class MyHomePage extends StatelessWidget {
                           const Text(
                             'LatoyaMiller@gmail.com',
                             style: TextStyle(
-                              fontSize: 16.0,
+                              fontSize: 12.0,
                               fontFamily: 'YourProfessionalFont',
                             ),
                           ),
                           const SizedBox(
                             height: 8.0,
                           ),
-                          ElevatedButton(
-                            onPressed: () {
-                              showDialog(
-                                context: context,
-                                builder: (context) {
-                                  return AlertDialog(
-                                    title: const Text('Bouton cliqué'),
-                                    content: const Text(
-                                      'Le bouton Expand a été cliqué !',
-                                    ),
-                                    actions: <Widget>[
-                                      ElevatedButton(
-                                        onPressed: () {
-                                          Navigator.of(context).pop();
-                                        },
-                                        style: ElevatedButton.styleFrom(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(8.0),
-                                          ),
-                                        ),
-                                        child: const Text('OK'),
+                          Container(
+                            decoration: BoxDecoration(
+                              gradient: const LinearGradient(
+                                colors: [
+                                  Color.fromRGBO(12, 179, 235, 0.6),
+                                  Colors.yellow,
+                                ],
+                                stops: [0.0, 1.0],
+                                begin: Alignment.topLeft,
+                                end: Alignment.topRight,
+                              ),
+                              borderRadius: BorderRadius.circular(50.0),
+                            ),
+                            child: ElevatedButton(
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (context) {
+                                    return AlertDialog(
+                                      title: const Text('Bouton cliqué'),
+                                      content: const Text(
+                                        'Le bouton Expand a été cliqué !',
                                       ),
-                                    ],
-                                  );
-                                },
-                              );
-                            },
-                            style: ElevatedButton.styleFrom(
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(19.0),
+                                      actions: <Widget>[
+                                        ElevatedButton(
+                                          onPressed: () {
+                                            Navigator.of(context).pop();
+                                          },
+                                          style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(8.0),
+                                            ),
+                                          ),
+                                          child: const Text('OK'),
+                                        ),
+                                      ],
+                                    );
+                                  },
+                                );
+                              },
+                              style: ElevatedButton.styleFrom(
+                                // ignore: deprecated_member_use
+                                primary: Colors.transparent,
+                                shadowColor: Colors.transparent,
+                              ),
+                              child: const Text(
+                                'Book an Appointment',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                ),
                               ),
                             ),
-                            child: const Text(
-                              'Book an appointment',
-                              style: TextStyle(
-                                fontSize: 16,
-                                color: Colors.white,
-                                fontFamily: 'YourProfessionalFont',
-                              ),
-                            ),
-                          ),
+                          )
                         ],
                       ),
                     ),

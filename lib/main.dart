@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'home.dart'; // Assurez-vous que le chemin vers votre fichier home.dart est correct
 
 void main() {
   runApp(const MyApp());
@@ -447,6 +448,27 @@ class MyHomePage extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                 ),
+                              ),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      Home(), // Utilisez le nom de la classe de votre page d'accueil
+                                ),
+                              );
+                            },
+                            style: ElevatedButton.styleFrom(
+                              // Personnalisez le style du bouton
+                              primary: Colors.blue, // Couleur du bouton
+                            ),
+                            child: const Text(
+                              "Retour",
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
                               ),
                             ),
                           )

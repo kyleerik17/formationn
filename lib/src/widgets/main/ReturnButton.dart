@@ -1,4 +1,4 @@
-import 'package:flut/src/pages/main.dart';
+import 'package:flut/main.dart';
 import 'package:flutter/material.dart';
 import 'ContactCard.dart';
 

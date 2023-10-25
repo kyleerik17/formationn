@@ -1,8 +1,8 @@
-import 'package:flut/widgets/HeaderImage.dart';
-import 'package:flut/widgets/PropertyInfo.dart';
+import 'package:flut/src/widgets/main/ContactCard.dart';
+import 'package:flut/src/widgets/main/HeaderImage.dart';
+import 'package:flut/src/widgets/main/InteriorInfo.dart';
+import 'package:flut/src/widgets/main/PropertyInfo.dart';
 import 'package:flutter/material.dart';
-import 'package:flut/widgets/InteriorInfo.dart';
-import 'package:flut/widgets/ContactCard.dart';
 
 void main() {
   runApp(const MyApp());

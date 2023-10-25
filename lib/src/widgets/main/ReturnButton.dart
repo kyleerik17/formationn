@@ -1,5 +1,4 @@
-import 'package:flut/widgets/acceuil.dart';
-import 'package:flut/widgets/myApp.dart';
+import 'package:flut/src/pages/main.dart';
 import 'package:flutter/material.dart';
 import 'ContactCard.dart';
 
@@ -12,7 +11,7 @@ class ReturnButton extends StatelessWidget {
       onPressed: () {
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => const Home(),
+            builder: (context) => const MyHomePage(),
           ),
         );
       },

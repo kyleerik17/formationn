@@ -1,8 +1,8 @@
-import 'package:flut/widgets/ContactInfo.dart';
-import 'package:flut/widgets/ProfileImage.dart';
-import 'package:flut/widgets/ReturnButton.dart';
+
+import 'package:flut/src/widgets/main/ContactInfo.dart';
+import 'package:flut/src/widgets/main/ProfileImage.dart';
+import 'package:flut/src/widgets/main/ReturnButton.dart';
 import 'package:flutter/material.dart';
-import 'package:flut/widgets/myApp.dart';
 
 class ContactCard extends StatelessWidget {
   const ContactCard({super.key});

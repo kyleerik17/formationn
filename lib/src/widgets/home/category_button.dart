@@ -4,7 +4,7 @@ class CategoryButton extends StatelessWidget {
   final String label;
   final bool isTrendingButton;
 
-  const CategoryButton(this.label, this.isTrendingButton, {super.key});
+  CategoryButton({required this.label, required this.isTrendingButton});
 
   @override
   Widget build(BuildContext context) {

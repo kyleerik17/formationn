@@ -74,4 +74,3 @@ class HeaderImage extends StatelessWidget {
     );
     }
   }
-

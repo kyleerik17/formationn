@@ -70,7 +70,7 @@ class HeaderImage extends StatelessWidget {
             ),
           ),
         ],
-    ),
+      ),
     );
-    }
   }
+}

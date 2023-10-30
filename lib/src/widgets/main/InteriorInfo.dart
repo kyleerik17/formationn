@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class InteriorInfo extends StatelessWidget {
   const InteriorInfo({super.key});
 
@@ -44,14 +45,14 @@ class InteriorInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Type',
+                      '                  Type',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 16.0,
                       ),
                     ),
                     Text(
-                      'Rental',
+                      '                Rental',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -72,14 +73,14 @@ class InteriorInfo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'Year built',
+                    ' Year built',
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 16.0,
                     ),
                   ),
                   Text(
-                    '2014',
+                    ' 2014',
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 18.0,
@@ -96,14 +97,14 @@ class InteriorInfo extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
-                      'Other',
+                      '                Other',
                       style: TextStyle(
                         color: Colors.grey,
                         fontSize: 18.0,
                       ),
                     ),
                     Text(
-                      'Air Conditioning',
+                      '                Air Conditioning',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.bold,
@@ -115,8 +116,11 @@ class InteriorInfo extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            height: 50.0,
+          ),
         ],
-     ), );
-    }
+      ),
+    );
   }
-  
+}

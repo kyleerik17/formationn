@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 class HeaderImage extends StatelessWidget {
-  const HeaderImage({super.key});
+  const HeaderImage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    return Container(
       height: MediaQuery.of(context).size.height * 0.4,
       child: Stack(
         children: <Widget>[

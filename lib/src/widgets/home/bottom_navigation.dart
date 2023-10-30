@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatelessWidget {
+  const BottomNavigation({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -11,6 +13,7 @@ class BottomNavigation extends StatelessWidget {
       child: BottomAppBar(
         shape: const CircularNotchedRectangle(),
         color: Colors.white,
+        height: 100,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
@@ -44,6 +47,7 @@ class BottomNavigation extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
+                    // Couleur du texte en blanc
                   ),
                 ),
               ],
@@ -68,6 +72,7 @@ class BottomNavigation extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
+                    // Couleur du texte en blanc
                   ),
                 ),
               ],
@@ -92,6 +97,7 @@ class BottomNavigation extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
+                    // Couleur du texte en blanc
                   ),
                 ),
               ],
@@ -116,6 +122,7 @@ class BottomNavigation extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
+                    // Couleur du texte en blanc
                   ),
                 ),
               ],

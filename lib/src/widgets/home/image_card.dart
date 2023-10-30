@@ -7,7 +7,7 @@ class ImageCard extends StatelessWidget {
   final String bedInfo;
   final String bathInfo;
 
-  ImageCard({
+  const ImageCard({
     required this.imagePath,
     required this.price,
     required this.location,
@@ -42,7 +42,7 @@ class ImageCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       '   $price',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.black,
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
@@ -54,7 +54,7 @@ class ImageCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       '    $location',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 17.0,
                       ),
                     ),
@@ -77,7 +77,7 @@ class ImageCard extends StatelessWidget {
                         padding: const EdgeInsets.all(4.0),
                         child: Text(
                           bedInfo,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.bold,
@@ -98,7 +98,7 @@ class ImageCard extends StatelessWidget {
                         padding: const EdgeInsets.all(4.0),
                         child: Text(
                           bathInfo,
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.black,
                             fontSize: 14.0,
                             fontWeight: FontWeight.bold,

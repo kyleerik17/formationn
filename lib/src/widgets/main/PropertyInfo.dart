@@ -14,7 +14,7 @@ class PropertyInfo extends StatelessWidget {
           const Text(
             '465 E 7th St, Brooklyn',
             style: TextStyle(
-                    color: Colors.black,
+              color: Colors.black,
               fontSize: 24.0,
               fontWeight: FontWeight.bold,
             ),
@@ -22,7 +22,7 @@ class PropertyInfo extends StatelessWidget {
           const Text(
             'New York City, Brooklyn',
             style: TextStyle(
-                    color: Colors.black,
+              color: Colors.black,
               fontSize: 15.0,
             ),
           ),
@@ -34,7 +34,7 @@ class PropertyInfo extends StatelessWidget {
                   text: '\$3,800.00/',
                   style: TextStyle(
                     color: Colors.black,
-                    fontSize: 20.0,
+                    fontSize: 24.0,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -49,6 +49,7 @@ class PropertyInfo extends StatelessWidget {
               ],
             ),
           ),
+          const SizedBox(height: 10),
           Row(
             children: <Widget>[
               Container(
@@ -62,11 +63,10 @@ class PropertyInfo extends StatelessWidget {
                 ),
                 child: const Row(
                   children: <Widget>[
-                    Icon(Icons.door_front_door_outlined,
-                        color: Colors.black),
+                    Icon(Icons.door_front_door_outlined, color: Colors.black),
                     SizedBox(width: 8.0),
                     Text(
-                      '2 Bedrooms',
+                      ' 2 Bedrooms',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 16.0,
@@ -90,7 +90,7 @@ class PropertyInfo extends StatelessWidget {
                     Icon(Icons.bathtub_outlined, color: Colors.black),
                     SizedBox(width: 8.0),
                     Text(
-                      '2 Bathrooms',
+                      ' 2 Bathrooms',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 16.0,
@@ -102,6 +102,7 @@ class PropertyInfo extends StatelessWidget {
             ],
           ),
         ],
-      ),  );
-    }
+      ),
+    );
   }
+}
